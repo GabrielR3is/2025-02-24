@@ -7,8 +7,7 @@ def obter_opcao() -> int:
     print("Cadastro de Produtos")
     print("-" * 20)
     print("1) Cadastrar Produto")
-    print("2) Listar Produtos")
-    print("3) Sair")
+    print("2) Sair")
     return int(input("Opção desejada: "))
 
 def cadastrar_produto(produtos: dict, codigo: int):
@@ -109,12 +108,12 @@ def main():
                 cadastrar_produto(produtos, codigo_produto)
                 codigo_produto = codigo_produto + 1
 
-            case 3:
+            case 2:
                 sair()
                 break
             case _:
                 print("Opção inválida. Voltando ao menu...")
                 time.sleep(2)
 
-if __name__ == "__main__": # dunder (double underline)
+if __name__ == "__main__": #dunder (double underline)
     main()
